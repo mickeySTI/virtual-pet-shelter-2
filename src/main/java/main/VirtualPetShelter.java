@@ -37,7 +37,37 @@ public class VirtualPetShelter {
 			pet.feed();
 		}
 	}
+	public void drinkAll(Collection<VirtualPet2> virtualPets){
+		for(VirtualPet2 pet: virtualPets) {
+			pet.drink();
+		}
+	}
 	
+	public void playAll(Collection<VirtualPet2> virtualPets){
+		for(VirtualPet2 pet: virtualPets) {
+			pet.play();
+		}
+	}
+	
+	public void tickAll(Collection<VirtualPet2> virtualPets){
+		for(VirtualPet2 pet: virtualPets) {
+			pet.tick();
+		}
+	}
+	
+	// Display Screen
+	public void petStatusDisplay(Collection<VirtualPet2> virtualPets) {
+		System.out.println(
+				"Name	|Hunger	|Thirst	|Boredom\r\n" + 
+				"--------|-------|-------|-------");
+		for(VirtualPet2 pet: virtualPets) {
+			System.out.println(pet.getName() + " |" + pet.getHunger() + " |" + pet.getThirst() + " |" + pet.getBoredom());
+		}
+		
+	}
+		
+		
+
 
 }	
 	

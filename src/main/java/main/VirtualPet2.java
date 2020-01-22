@@ -93,5 +93,7 @@ public class VirtualPet2 {
 	
 		return this.description ;
 	}
+	
+	
 
 }
