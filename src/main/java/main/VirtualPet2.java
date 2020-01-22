@@ -25,15 +25,6 @@ public class VirtualPet2 {
 		this.boredom = boredom;
 	}
 
-	public VirtualPet2(String namePara, String descriptionPara, int hungerPara, int thirstPara, int boredomPara) {
-		this.name = namePara;
-		this.description = descriptionPara;
-		this.hunger = hungerPara;
-		this.thirst = thirstPara;
-		this.boredom = boredomPara;
-		
-	}
-
 	public int getHunger() {
 		return this.hunger;
 	}
