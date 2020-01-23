@@ -5,8 +5,8 @@ public class VirtualPet2 {
 	private int hunger = (int) (Math.random() * 51) + 0;;
 	private int thirst = (int) (Math.random() * 51) + 0;;
 	private int boredom = (int) (Math.random() * 51) + 0;;
-	private String name = "";
-	private String description = "";
+	private String name;
+	private String description;
 
 	public VirtualPet2() {
 	
@@ -46,7 +46,7 @@ public class VirtualPet2 {
 	}
 
 	public void feed() {
-		this.hunger--;
+		this.hunger-=10;
 		
 		if(this.hunger < 0) {
 			this.hunger = 0;
@@ -55,7 +55,7 @@ public class VirtualPet2 {
 	}
 
 	public void drink() {
-		this.thirst--;
+		this.thirst-=10;
 		
 		if(this.thirst <0) {
 			this.thirst = 0;
@@ -63,7 +63,7 @@ public class VirtualPet2 {
 	}
 
 	public void play() {
-		this.boredom--;
+		this.boredom-=10;
 		if(this.boredom < 0) {
 			this.boredom = 0;
 		}
@@ -87,9 +87,9 @@ public class VirtualPet2 {
 
 	public void tick() {
 		
-		this.hunger++;
-		this .thirst++;
-		this.boredom++;
+		this.hunger+= 5;
+		this .thirst+= 5;
+		this.boredom+= 5;
 		
 	}
 
