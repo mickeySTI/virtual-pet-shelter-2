@@ -2,9 +2,9 @@ package main;
 
 public class VirtualPet2 {
 
-	private int hunger = 0;
-	private int thirst = 0;
-	private int boredom = 0;
+	private int hunger = (int) (Math.random() * 51) + 0;;
+	private int thirst = (int) (Math.random() * 51) + 0;;
+	private int boredom = (int) (Math.random() * 51) + 0;;
 	private String name = "";
 	private String description = "";
 
@@ -24,7 +24,15 @@ public class VirtualPet2 {
 		this.thirst = thirst;
 		this.boredom = boredom;
 	}
-
+	
+	public VirtualPet2(String name, String description, int hunger, int thirst, int boredom) {
+		this.hunger = hunger;
+		this.thirst = thirst;
+		this.boredom = boredom;
+		this.name = name;
+		this.description = description;
+	}
+			
 	public int getHunger() {
 		return this.hunger;
 	}

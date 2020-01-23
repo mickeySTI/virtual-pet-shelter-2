@@ -13,7 +13,7 @@ public class VirtualPetShelter {
 		return shelter.values();
 	}
 	
-	public VirtualPet2 selectPet(String name) {
+	public VirtualPet2 selectPet(int name) {
 		return shelter.get(name);
 	}
 	
@@ -42,12 +42,10 @@ public class VirtualPetShelter {
 			pet.drink();
 		}
 	}
-	
-	public void playAll(Collection<VirtualPet2> virtualPets){
-		for(VirtualPet2 pet: virtualPets) {
-			pet.play();
+	// To pick one specific pet
+	public void playWithAPet(String name){
+			shelter.get(name).play();
 		}
-	}
 	
 	public void tickAll(Collection<VirtualPet2> virtualPets){
 		for(VirtualPet2 pet: virtualPets) {
@@ -61,7 +59,7 @@ public class VirtualPetShelter {
 				"Name	|Hunger	|Thirst	|Boredom\r\n" + 
 				"--------|-------|-------|-------");
 		for(VirtualPet2 pet: virtualPets) {
-			System.out.println(pet.getName() + " |" + pet.getHunger() + " |" + pet.getThirst() + " |" + pet.getBoredom());
+			System.out.println(pet.getName() + "\t|" + pet.getHunger() + "\t|" + pet.getThirst() + "\t|" + pet.getBoredom());
 		}
 		
 	}
