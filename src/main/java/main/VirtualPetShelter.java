@@ -15,14 +15,15 @@ public class VirtualPetShelter {
 
 	public VirtualPet2 selectPet(String name) {
 		return shelter.get(name);
+		
 	}
 
 	public void addNewPet(VirtualPet2 pet) {
 		shelter.put(pet.getName(), pet);
 	}
 
-	public void adopt(VirtualPet2 adoptedPet) {
-		shelter.remove(adoptedPet, adoptedPet);
+	public void adopt(String petName) {
+		this.shelter.remove(petName);
 	}
 
 	public void feedAll(Collection<VirtualPet2> virtualPets) {
