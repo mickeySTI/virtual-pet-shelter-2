@@ -75,7 +75,6 @@ public class VirtualPetShelterApp {
 					break;
 			case "6":
 				shelter.petStatusDisplay(petsInShelter);
-				shelter.tickAll(petsInShelter);
 				break;
 			case "7":
 				System.exit(0);
